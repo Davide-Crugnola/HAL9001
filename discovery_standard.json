@@ -1,0 +1,39 @@
+{
+    "id": "discovery_standard",
+    "name": "DISCOVERY ONE - STANDARD",
+    "description": "Missione standard verso Alpha Centauri A. Segui il percorso canonico di 2001: Odissea nello Spazio.",
+    "start_date": "2030-01-01",
+    "target": {
+        "name": "Alpha Centauri A",
+        "distance_ly": 4.37
+    },
+    "crew": [
+        "D. Bowman",
+        "F. Poole",
+        "E. Halvorsen",
+        "S. Williams",
+        "V. Kaminsky"
+    ],
+    "mission_speed_c": 0.1,
+    "events": [
+        {
+            "type": "crew_collapse",
+            "target": "V. Kaminsky",
+            "start_day": 5000,
+            "description": "COLLASSO CRIOSTASICO - V. Kaminsky"
+        },
+        {
+            "type": "awakening",
+            "target": "D. Bowman",
+            "start_day": 3650,
+            "brain_multiplier": 8,
+            "hr_shift": 0.6,
+            "description": "RISVEGLIO ACCELERATO - D. Bowman"
+        }
+    ],
+    "hal_personality": {
+        "paranoia": 0.3,
+        "verbosity": 0.5,
+        "glitch_chance": 0.0001
+    }
+}

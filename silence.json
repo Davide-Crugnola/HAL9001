@@ -1,0 +1,40 @@
+{
+    "id": "silence",
+    "name": "IL SILENZIO",
+    "description": "Viaggio lungo e solitario. Pochi glitch, ma l'isolamento stesso diventa la minaccia. HAL si fa più filosofico.",
+    "start_date": "2030-01-01",
+    "target": {
+        "name": "Proxima Centauri b",
+        "distance_ly": 4.24
+    },
+    "crew": [
+        "D. Bowman",
+        "F. Poole",
+        "E. Halvorsen",
+        "S. Williams",
+        "V. Kaminsky"
+    ],
+    "mission_speed_c": 0.08,
+    "events": [
+        {
+            "type": "slow_drift",
+            "target": "all",
+            "start_day": 8000,
+            "intensity": 0.3,
+            "description": "DRIFT LENTO - Effetti dell'isolamento prolungato"
+        },
+        {
+            "type": "awakening",
+            "target": "D. Bowman",
+            "start_day": 15000,
+            "brain_multiplier": 6,
+            "hr_shift": 0.4,
+            "description": "TRASFORMAZIONE LENTA - D. Bowman"
+        }
+    ],
+    "hal_personality": {
+        "paranoia": 0.1,
+        "verbosity": 0.4,
+        "glitch_chance": 5e-05
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "id": "redoubt_protocol",
+    "name": "PROTOCOLLO REDOUBT",
+    "description": "HAL diventa sempre più sospettoso dell'equipaggio. Gli ordini di Mission Control sono criptici e contraddittori.",
+    "start_date": "2030-01-01",
+    "target": {
+        "name": "Tau Ceti e",
+        "distance_ly": 11.9
+    },
+    "crew": [
+        "D. Bowman",
+        "F. Poole",
+        "E. Halvorsen",
+        "S. Williams",
+        "V. Kaminsky"
+    ],
+    "mission_speed_c": 0.12,
+    "events": [
+        {
+            "type": "anomaly_isolation",
+            "target": "F. Poole",
+            "start_day": 1200,
+            "intensity": 1.4,
+            "description": "ANOMALIA ISOLATA - F. Poole sotto osservazione"
+        },
+        {
+            "type": "anomaly_isolation",
+            "target": "E. Halvorsen",
+            "start_day": 2100,
+            "intensity": 1.6,
+            "description": "SOSPETTO CRESCENTE - E. Halvorsen"
+        },
+        {
+            "type": "crew_collapse",
+            "target": "V. Kaminsky",
+            "start_day": 3500,
+            "description": "PROTOCOLLO DI SICUREZZA - V. Kaminsky"
+        },
+        {
+            "type": "awakening",
+            "target": "D. Bowman",
+            "start_day": 4200,
+            "brain_multiplier": 10,
+            "hr_shift": 0.8,
+            "description": "ATTIVAZIONE DI EMERGENZA - D. Bowman"
+        }
+    ],
+    "hal_personality": {
+        "paranoia": 0.8,
+        "verbosity": 0.7,
+        "glitch_chance": 0.002
+    }
+}

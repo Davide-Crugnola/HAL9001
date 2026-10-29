@@ -1,0 +1,358 @@
+/* =========================================================
+   HAL-9000 CRT / DISCOVERY ONE HUD STYLING
+   ========================================================= */
+
+/* Global Background */
+.stApp {
+    background-color: #000000 !important;
+    color: #ff0000;
+    font-family: 'IBM Plex Mono', 'Share Tech Mono', 'Courier New', monospace !important;
+}
+
+/* Remove default streamlit padding for more cinematic feel */
+.block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 98% !important;
+}
+
+/* CRT Scanlines Effect */
+.stApp::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 9998;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+/* CRT Vignette */
+.stApp::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 9997;
+    pointer-events: none;
+}
+
+/* Ensure content is above effects */
+.main .block-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sidebar styling - Discovery One style */
+[data-testid="stSidebar"] {
+    background-color: #000000 !important;
+    border-right: 2px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+[data-testid="stSidebar"] * {
+    color: #ff0000 !important;
+    font-family: 'IBM Plex Mono', 'Share Tech Mono', monospace !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #ff0000 !important;
+    font-family: 'IBM Plex Mono', 'Share Tech Mono', monospace !important;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Buttons - Angular Discovery One style */
+.stButton > button {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 2px solid #ff0000 !important;
+    border-radius: 0px !important;
+    font-family: 'IBM Plex Mono', 'Share Tech Mono', monospace !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    background-color: #330000 !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.stButton > button:disabled {
+    color: #660000 !important;
+    border-color: #660000 !important;
+    box-shadow: none !important;
+}
+
+/* Metrics - LED style */
+[data-testid="stMetric"] {
+    background-color: #000000;
+    border: 1px solid #ff0000;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+[data-testid="stMetricLabel"] {
+    color: #ff6666 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    text-transform: uppercase;
+    font-size: 11px !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #ff0000 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    font-size: 24px !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2px;
+    background-color: #000000;
+    border-bottom: 2px solid #ff0000;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 1px solid #ff0000 !important;
+    border-radius: 0px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    text-transform: uppercase;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #330000 !important;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Dataframes */
+[data-testid="stDataFrame"] {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+[data-testid="stDataFrame"] * {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* Expanders */
+.streamlit-expanderHeader {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 1px solid #ff0000 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    text-transform: uppercase;
+}
+
+/* Selectbox */
+.stSelectbox > div > div {
+    background-color: #000000 !important;
+    color: #ff0000 !important;
+    border: 1px solid #ff0000 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* Dividers */
+hr {
+    border-color: #ff0000 !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Alert levels */
+.alert-level-1 {
+    border: 2px solid #ffb000;
+    box-shadow: 0 0 15px #ffb000;
+}
+
+.alert-level-2 {
+    border: 2px solid #ff8800;
+    box-shadow: 0 0 25px #ff8800;
+    animation: pulse2 1.5s infinite;
+}
+
+.alert-level-3 {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 35px #ff0000;
+    animation: pulse3 1s infinite;
+}
+
+.alert-level-4-overlay {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-color: rgba(150,0,0,0.95);
+    color:white;
+    font-size:40px;
+    text-align:center;
+    padding-top:15%;
+    z-index:10000;
+    text-shadow: 0 0 20px black;
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: flicker 0.15s infinite;
+}
+
+@keyframes pulse2 {
+    0% { box-shadow: 0 0 5px #ff8800; }
+    50% { box-shadow: 0 0 25px #ff8800; }
+    100% { box-shadow: 0 0 5px #ff8800; }
+}
+
+@keyframes pulse3 {
+    0% { box-shadow: 0 0 10px #ff0000; }
+    50% { box-shadow: 0 0 40px #ff0000; }
+    100% { box-shadow: 0 0 10px #ff0000; }
+}
+
+@keyframes flicker {
+    0% { opacity: 0.95; }
+    50% { opacity: 1; }
+    100% { opacity: 0.95; }
+}
+
+.glitch-text {
+    position: relative;
+    color: #ff0000;
+    animation: glitch 0.3s infinite;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 0 red, -2px 0 cyan; transform: translate(0,0); }
+    25% { text-shadow: -2px 0 red, 2px 0 cyan; transform: translate(-1px, 1px); }
+    50% { text-shadow: 2px 0 red, -2px 0 cyan; transform: translate(1px, -1px); }
+    75% { text-shadow: -2px 0 red, 2px 0 cyan; transform: translate(-1px, -1px); }
+    100% { text-shadow: 2px 0 red, -2px 0 cyan; transform: translate(0,0); }
+}
+
+.hal-eye {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffaaaa, #ff0000, #330000);
+    box-shadow: 0 0 25px #ff0000;
+    margin: 0 auto;
+    animation: halpulse 2s infinite;
+}
+
+.hal-eye-alert-1 { animation: halpulse 1.5s infinite; box-shadow: 0 0 30px #ffb000; background: radial-gradient(circle at 30% 30%, #ffddaa, #ffb000, #332200); }
+.hal-eye-alert-2 { animation: halpulse 1s infinite; box-shadow: 0 0 40px #ff8800; background: radial-gradient(circle at 30% 30%, #ffccaa, #ff8800, #331100); }
+.hal-eye-alert-3 { animation: halpulse 0.7s infinite; box-shadow: 0 0 50px #ff0000; background: radial-gradient(circle at 30% 30%, #ffaaaa, #ff0000, #330000); }
+.hal-eye-alert-4 { animation: halpulse 0.4s infinite; box-shadow: 0 0 60px #ff0000; background: radial-gradient(circle at 30% 30%, #ffffff, #ff0000, #000000); }
+
+@keyframes halpulse {
+    0% { box-shadow: 0 0 10px #ff0000; }
+    50% { box-shadow: 0 0 35px #ff0000; }
+    100% { box-shadow: 0 0 10px #ff0000; }
+}
+
+/* HAL Persistent Panel */
+.hal-persistent-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 350px;
+    background-color: #000000;
+    border: 2px solid #ff0000;
+    padding: 10px;
+    z-index: 9999;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.hal-panel-header {
+    color: #ff0000;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    margin-bottom: 5px;
+}
+
+.hal-panel-status {
+    color: #ff6666;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hal-panel-line {
+    color: #ffffff;
+    font-size: 11px;
+    min-height: 40px;
+    border-left: 2px solid #ff0000;
+    padding-left: 8px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* LED Bar */
+.led-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #110000;
+    border: 1px solid #ff0000;
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+.led-segment {
+    flex: 1;
+    background-color: #330000;
+    height: 100%;
+}
+
+.led-segment.active-red {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.led-segment.active-orange {
+    background-color: #ff8800;
+    box-shadow: 0 0 10px #ff8800;
+}
+
+.led-segment.active-yellow {
+    background-color: #ffb000;
+    box-shadow: 0 0 10px #ffb000;
+}
+
+/* Vitals HUD Panel */
+.vitals-hud {
+    background-color: #000000;
+    border: 2px solid #ff0000;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Page flicker on high alert */
+.page-flicker {
+    animation: pageflicker 0.1s infinite;
+}
+
+@keyframes pageflicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.98; }
+    100% { opacity: 1; }
+}

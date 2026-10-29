@@ -1,0 +1,53 @@
+{
+    "id": "tma1_echo",
+    "name": "ECO DI TMA-1",
+    "description": "Qualcosa è stato risvegliato. I parametri diventano sempre più anomali man mano che ci si avvicina al destino.",
+    "start_date": "2030-01-01",
+    "target": {
+        "name": "Monolith Point - Alpha Centauri",
+        "distance_ly": 4.37
+    },
+    "crew": [
+        "D. Bowman",
+        "F. Poole",
+        "E. Halvorsen",
+        "S. Williams",
+        "V. Kaminsky"
+    ],
+    "mission_speed_c": 0.1,
+    "events": [
+        {
+            "type": "resonance",
+            "target": "D. Bowman",
+            "start_day": 1000,
+            "intensity": 0.5,
+            "description": "RISONANZA INIZIALE - D. Bowman"
+        },
+        {
+            "type": "resonance",
+            "target": "D. Bowman",
+            "start_day": 2500,
+            "intensity": 1.0,
+            "description": "RISONANZA CRESCENTE - D. Bowman"
+        },
+        {
+            "type": "crew_collapse",
+            "target": "V. Kaminsky",
+            "start_day": 4500,
+            "description": "INTERFERENZA - V. Kaminsky"
+        },
+        {
+            "type": "awakening",
+            "target": "D. Bowman",
+            "start_day": 3000,
+            "brain_multiplier": 15,
+            "hr_shift": 1.0,
+            "description": "CONTATTO - D. Bowman"
+        }
+    ],
+    "hal_personality": {
+        "paranoia": 0.5,
+        "verbosity": 0.6,
+        "glitch_chance": 0.0005
+    }
+}
